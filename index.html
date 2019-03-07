@@ -6,11 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Homework 4</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Patrick+Hand" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javasrcipt/game.js"></script>
     
 </head>
 <body>
+    <div class="jumbotron">
+            <h1 class="display-4" id="title">Crystal Collector</h1>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <h2 class="lead" id="text01">Score to match: </h2>
+                        <h1 class="display-5"><span id="randomNumber"></span></h1>
+                    </div>
+                    <div class="col-md-5">
+                        <h2 class="lead" id="text02">Your score: </h2>
+                        <h1 class="display-5"><span id="score"></span></h1>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>     
+            <hr class="my-4">
+            <div class="container" id="images">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img id="c1" class="lead" class="crystal" src="assets/images/crystal02.png" alt="Crystal">   
+                    </div>
+                    <div class="col-md-3">
+                        <img id="c2" class="lead" class="crystal" src="assets/images/crystal03.png" alt="Crystal"> 
+                    </div>
+                    <div class="col-md-3"> 
+                        <img id="c3" class="lead" class="crystal" src="assets/images/crystal01.png" alt="Crystal">  
+                    </div>
+                    <div class="col-md-3">
+                        <img id="c4" class="lead" class="crystal" src="assets/images/crystal04.png" alt="Crystal">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container" class="scoreboard">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <h2 class="lead" id="text03">Wins: </h2></h2>
+                        <h1 class="display-5"><span id="wins"></span></h1>
+                    </div>
+                    <div class="col-md-5">
+                        <h2 class="lead" id="text04">Losses: </h2>
+                        <h1 class="display-5"><span id="losses"></span></h1>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>     
+          </div>
     
+
 </body>
 </html>
