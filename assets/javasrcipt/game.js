@@ -6,7 +6,7 @@ $(document).ready(function(){
     var Random = Math.floor(Math.random()* 101 + 19)
     $("#randomNumber").text(Random);
 
-// 4 crystals wach with a different random number between 1 - 12
+// 4 crystals each with a different random number between 1 - 12
 
     var c1 = Math.floor(Math.random()* 11 + 1)
         console.log("The first crystal's power level is " + c1);
@@ -17,7 +17,7 @@ $(document).ready(function(){
     var c4 = Math.floor(Math.random()* 11 + 1)
         console.log("The fourth crystal's power level is " + c4);
 
-// clicking the crystals adds the numbers and tallies it html
+// clicking the crystals adds the numbers and tallies them in the html
 
     var wins = 0;
     var losses = 0;
@@ -33,6 +33,10 @@ $(document).ready(function(){
         c4 = Math.floor(Math.random()* 11 + 1);
         userTotal = 0;
         $("#score").text(userTotal);
+        console.log("The first crystal's power level is " + c1);
+        console.log("The second crystal's power level is " + c2);
+        console.log("The third crystal's power level is " + c3);
+        console.log("The fourth crystal's power level is " + c4);
     }
 
 // If user score = computer score then user wins
@@ -41,6 +45,7 @@ function winner(){
     wins++;
     // Win section in HTML is updated
     $("#wins").text(wins);
+    console.log("User won: " + userTotal + " = " + Random);
     // reset game
     reset();
 }
@@ -50,6 +55,7 @@ function loser(){
     losses++;
     // Losses section in HTML is updated
     $("#losses").text(losses);
+    console.log("User lost: " + userTotal + " != " + Random);
     // reset game
     reset();
 }
@@ -58,7 +64,6 @@ function loser(){
 
 $("#c1").on("click", function(){
     userTotal = userTotal + c1;
-    console.log("New user total is " + userTotal);
     $("#score").text(userTotal);
         if (userTotal == Random){
             winner();
@@ -72,7 +77,6 @@ $("#c1").on("click", function(){
 
 $("#c2").on("click", function(){
     userTotal = userTotal + c2;
-    console.log("New user total is " + userTotal);
     $("#score").text(userTotal);
         if (userTotal == Random){
             winner();
@@ -86,7 +90,6 @@ $("#c2").on("click", function(){
 
 $("#c3").on("click", function(){
     userTotal = userTotal + c3;
-    console.log("New user total is " + userTotal);
     $("#score").text(userTotal);
         if (userTotal == Random){
             winner();
@@ -100,7 +103,6 @@ $("#c3").on("click", function(){
 
 $("#c4").on("click", function(){
     userTotal = userTotal + c4;
-    console.log("New user total is " + userTotal);
     $("#score").text(userTotal);
         if (userTotal == Random){
             winner();
